@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>McDonald's Voice Assistant Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #f7f7f7 0%, #e6e6e6 100%);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #DA291C;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin: 1rem auto;
+            display: block;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-section {
+            margin: 2rem 0;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item-details {
+            flex: 1;
+        }
+
+        .menu-item-price {
+            color: #DA291C;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .instructions {
+            background: #FFC72C;
+            color: #333;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        @keyframes ripple {
+            0% {
+                box-shadow: 0 0 0 0 rgba(218, 41, 28, 0.3);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(218, 41, 28, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(218, 41, 28, 0);
+            }
+        }
+
+        .ripple {
+            animation: ripple 1s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img
+            src="./zienna.png"
+            alt="Zienna Logo"
+            class="logo"
+        >
+        <h1>McDonald's Voice Assistant Demo</h1>
+    </header>
+
+    <div class="content">
+        <div class="instructions">
+            Click the voice button in the bottom right corner to start your order!
+        </div>
+
+        <div class="menu-section">
+            <h2>Popular Menu Items</h2>
+            <div class="menu-item">
+                <div class="menu-item-details">
+                    <h3>Big Mac®</h3>
+                    <p>Two all-beef patties, special sauce, lettuce, cheese, pickles, onions on a sesame seed bun.</p>
+                </div>
+                <div class="menu-item-price">$5.99</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-details">
+                    <h3>Quarter Pounder®</h3>
+                    <p>Fresh beef burger with cheese, onions, pickles, and condiments on a sesame seed bun.</p>
+                </div>
+                <div class="menu-item-price">$5.49</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-details">
+                    <h3>McNuggets®</h3>
+                    <p>Tender, juicy Chicken McNuggets® made with white meat.</p>
+                </div>
+                <div class="menu-item-price">$4.99</div>
+            </div>
+        </div>
+
+        <div class="menu-section">  
+            <h2>Beverages</h2>
+            <div class="menu-item">
+                <div class="menu-item-details">
+                    <h3>Coca-Cola®</h3>
+                    <p>Ice-cold Coca-Cola® served in your choice of size.</p>
+                </div>
+                <div class="menu-item-price">$1.99</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-details">
+                    <h3>McCafé® Coffee</h3>
+                    <p>Premium roast coffee, brewed fresh every 30 minutes.</p>
+                </div>
+                <div class="menu-item-price">$2.49</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Voice Widget Embed -->
+    <script
+        src="./voice-widget.js"
+        data-config-id="default"
+    ></script>
+</body>
+
+</html>
