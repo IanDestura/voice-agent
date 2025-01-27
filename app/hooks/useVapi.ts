@@ -71,7 +71,7 @@ const useVapi = () => {
   }, []);
 
   useEffect(() => {
-    const publicKey = "e1252025-845b-4ae0-b3b6-8ec272ae6ad6";
+    const publicKey = "70133098-85df-4f66-86bb-b649ac7eac90";
     if (!publicKey) {
       throw new Error("NEXT_PUBLIC_VAPI_PUBLIC_KEY is not defined");
     }
@@ -144,7 +144,7 @@ const useVapi = () => {
         try {
           await vapiInstance.stop();
           await new Promise((resolve) => setTimeout(resolve, 2000));
-          const assistantId = "e1252025-845b-4ae0-b3b6-8ec272ae6ad6";
+          const assistantId = "70133098-85df-4f66-86bb-b649ac7eac90";
           if (assistantId) {
             await vapiInstance.start(assistantId);
             return;
@@ -196,7 +196,7 @@ const useVapi = () => {
           throw new Error("No microphone devices found");
         }
 
-        const assistantId = "e1252025-845b-4ae0-b3b6-8ec272ae6ad6";
+        const assistantId = "70133098-85df-4f66-86bb-b649ac7eac90";
         if (!assistantId) {
           throw new Error("NEXT_PUBLIC_VAPI_ASSISTANT_ID is not defined");
         }
@@ -225,7 +225,7 @@ const useVapi = () => {
           }
 
           // Create a new instance on error
-          const publicKey = "e1252025-845b-4ae0-b3b6-8ec272ae6ad6";
+          const publicKey = "70133098-85df-4f66-86bb-b649ac7eac90";
           if (publicKey) {
             vapiRef.current = new Vapi(publicKey);
           }
