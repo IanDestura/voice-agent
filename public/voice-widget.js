@@ -66,7 +66,7 @@
     const configId = script?.getAttribute('data-config-id') || 'default';
 
     // Update to use the app's voice widget URL with Vapi configuration
-    iframe.src = `http://localhost:3000/voice-widget?configId=${configId}&theme=mcdonalds`;
+    iframe.src = `https://voice-agent-xi.vercel.app/voice-widget?configId=${configId}&theme=mcdonalds`;
 
     // Add elements to DOM
     container.appendChild(conversationBubble);
@@ -137,7 +137,7 @@
 
     // Handle widget state changes and messages from iframe
     window.addEventListener('message', (event) => {
-      if (event.origin !== 'http://localhost:3000') return;
+      if (event.origin !== 'https://voice-agent-xi.vercel.app/') return;
 
       if (event.data.type === 'vapiState') {
         const { state, volumeLevel, conversation } = event.data;
