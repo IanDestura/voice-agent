@@ -71,7 +71,7 @@ const useVapi = () => {
   }, []);
 
   useEffect(() => {
-    const publicKey = process.env.NEXT_PUBLIC_VAPI_PUBLIC_KEY;
+    const publicKey = "e1252025-845b-4ae0-b3b6-8ec272ae6ad6";
     if (!publicKey) {
       throw new Error("NEXT_PUBLIC_VAPI_PUBLIC_KEY is not defined");
     }
@@ -225,7 +225,7 @@ const useVapi = () => {
           }
 
           // Create a new instance on error
-          const publicKey = process.env.NEXT_PUBLIC_VAPI_PUBLIC_KEY;
+          const publicKey = "e1252025-845b-4ae0-b3b6-8ec272ae6ad6";
           if (publicKey) {
             vapiRef.current = new Vapi(publicKey);
           }
