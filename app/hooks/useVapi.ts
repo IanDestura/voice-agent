@@ -144,7 +144,7 @@ const useVapi = () => {
         try {
           await vapiInstance.stop();
           await new Promise((resolve) => setTimeout(resolve, 2000));
-          const assistantId = "70133098-85df-4f66-86bb-b649ac7eac90";
+          const assistantId = "9b255c47-65b9-46c9-a019-5c54ed50ef30";
           if (assistantId) {
             await vapiInstance.start(assistantId);
             return;
@@ -196,7 +196,7 @@ const useVapi = () => {
           throw new Error("No microphone devices found");
         }
 
-        const assistantId = "70133098-85df-4f66-86bb-b649ac7eac90";
+        const assistantId = "9b255c47-65b9-46c9-a019-5c54ed50ef30";
         if (!assistantId) {
           throw new Error("NEXT_PUBLIC_VAPI_ASSISTANT_ID is not defined");
         }
