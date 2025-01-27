@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+/* Reset background styles for voice widget */
+html.bg-transparent,
+body.bg-transparent {
+  background: transparent !important;
+}
+
+.ripple {
+  position: relative;
+}
+
+.ripple::before,
+.ripple::after,
+.ripple::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  animation: ripple 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  opacity: 0;
+  border: 2px solid rgba(255, 255, 255, 0.6); /* White ripple for better visibility */
+}
+
+.ripple::after {
+  animation-delay: 0.5s;
+}
+
+.ripple::before {
+  animation-delay: 1s;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.welcome-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
